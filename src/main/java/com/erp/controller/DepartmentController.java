@@ -25,7 +25,7 @@ public class DepartmentController {
 	@Autowired
 	DepartmentService departmentService;
 	
-	@PostMapping("/create")
+	@PostMapping("/")
 	public ResponseEntity<DepartmentDTO> create(@Valid @RequestBody DepartmentDTO departmentDTO){
 		DepartmentDTO dto = departmentService.createDepartment(departmentDTO);
 		

@@ -16,13 +16,13 @@ public class CustomUserDetail implements UserDetails{
 	
 	public CustomUserDetail(Users users) {
 		// TODO Auto-generated constructor stub
-		users= this.users;
+		this.users=users;
 	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
-		return List.of(new SimpleGrantedAuthority("ROLE_"+users.getRole().toString()));
+		return List.of(new SimpleGrantedAuthority(users.getRole().getRolename()));
 	}
 
 	@Override
