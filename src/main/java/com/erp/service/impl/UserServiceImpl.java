@@ -33,11 +33,7 @@ public class UserServiceImpl  implements UserService{
 		return mapper.map(savedUser, UserDTO.class);
 	}
 
-	@Override
-	public UserDTO loginUser(AuthRequest authRequest) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 	@Override
 	public UserDTO assignRoleToUser(Integer roleId, Integer userId) {
